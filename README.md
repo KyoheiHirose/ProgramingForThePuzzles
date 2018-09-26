@@ -1,1 +1,2 @@
 # ProgramingForThePuzzles
+問題解決のためのPythonプログラミングの
