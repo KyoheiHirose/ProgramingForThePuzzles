@@ -5,6 +5,7 @@ cap2 = ['F', 'F', 'B', 'B', 'B', 'F', 'B', 'B', 'B', 'F', 'F', 'B', 'F', ]
 def please_conform(caps):
     start = forward = backward = 0
     intervals = []
+    caps = caps + ['END']
     for i in range(1, len(caps)):
         if caps[start] != caps[i]:
             intervals.append((start, i-1, caps[start]))
@@ -13,7 +14,6 @@ def please_conform(caps):
             else:
                 backward += 1
             start = i
-    intervals.append((start, len(caps)-1, caps[start]))
     if caps[start] == 'F':
         forward += 1
     else:
